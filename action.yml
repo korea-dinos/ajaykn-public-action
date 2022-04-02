@@ -18,6 +18,7 @@ runs:
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
-      shell: bash          
+      shell: bash   
+    - run: pwd && ls -R
     - run: chmod +x goodbye.sh && goodbye.sh
       shell: bash
